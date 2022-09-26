@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\bin\Debug\netcoreapp3.1\Static Class and Constructors.exe
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\bin\Debug\netcoreapp3.1\Static Class and Constructors.deps.json
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\bin\Debug\netcoreapp3.1\Static Class and Constructors.runtimeconfig.json
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\bin\Debug\netcoreapp3.1\Static Class and Constructors.runtimeconfig.dev.json
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\bin\Debug\netcoreapp3.1\Static Class and Constructors.dll
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\bin\Debug\netcoreapp3.1\Static Class and Constructors.pdb
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\obj\Debug\netcoreapp3.1\Static Class and Constructors.csprojAssemblyReference.cache
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\obj\Debug\netcoreapp3.1\Static Class and Constructors.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\obj\Debug\netcoreapp3.1\Static Class and Constructors.AssemblyInfo.cs
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\obj\Debug\netcoreapp3.1\Static Class and Constructors.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\obj\Debug\netcoreapp3.1\Static Class and Constructors.dll
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\obj\Debug\netcoreapp3.1\Static Class and Constructors.pdb
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\Static Class and Constructors\obj\Debug\netcoreapp3.1\Static Class and Constructors.genruntimeconfig.cache
