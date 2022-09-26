@@ -1,0 +1,155 @@
+#1
+using System;
+
+namespace Array_and_Loops_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Cities in France:");
+            
+            string[] FranceArr = new string[10];
+
+            FranceArr[0] = "Paris";
+            FranceArr[1] = "Marseille";
+            FranceArr[2] = "Bordeaux";
+            FranceArr[3] = "Strasbourg";
+            FranceArr[4] = "Lyon";
+            FranceArr[5] = "Nice";
+            FranceArr[6] = "Nantes";
+            FranceArr[7] = "Toulouse";
+            FranceArr[8] = "Lille";
+            FranceArr[9] = "Montpellier";
+
+            foreach(String France in FranceArr)
+            {
+                Console.WriteLine("\n\tCity of " + France);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+
+	string city;
+            int i;
+
+            int[] arr = new int[10];
+
+            for(i = 0; i <10; i++)
+            {
+                Console.Write("\n\tEnter a City: ");
+                city = Console.ReadLine();
+            }
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine();
+          
+            foreach (char c in arr)
+            {
+               Console.WriteLine("\n\tYou have entered " + arr[c]);
+
+
+
+
+            var sb = new System.Text.StringBuilder();
+            
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("\n\tEnter a City: ");
+                city = Console.ReadLine();
+                sb.AppendLine(i.ToString());
+            }
+            Console.WriteLine();
+            Console.WriteLine("\t-------------------------------");
+            Console.WriteLine();
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("\n\tYou have entered " + i.ToString());
+
+
+            }
+
+
+#2
+
+using System;
+
+namespace Array_and_Loops_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int mulArr1;
+
+            Console.Write("Enter a number: ");
+            mulArr1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("- - - - MULTIPLICATION TABLE - - - -");
+
+            for (int mulArr2 = 0; mulArr2 < 6; mulArr2++)
+            {
+              
+                Console.WriteLine("\n\t {0} x {1} = {2}", mulArr1, mulArr2, mulArr1 * mulArr2);
+
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+#3
+
+using Microsoft.VisualBasic;
+using System;
+
+namespace Array_and_Loops_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] alphaBet = { 'A', 'B', 'C', 'D' };
+            string[] nbaPlayer = { "Kobe", "Jordan", "James", "Rose" };
+
+            foreach(char a in alphaBet)
+            {
+                Console.WriteLine(a);
+            }
+
+            foreach(string b in nbaPlayer)
+            {
+                Console.WriteLine(b);
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}
+
+#4
+using System;
+
+namespace Array_and_Loops_4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string[] names = {"Marc", "Ivan", "Malonhao", "Cabrera", "Michael", "Jay", "Sevilla", "Yvette", 
+                "Michelle", "Michele", "Ivy", "Ingrid", "Michaela", "Ireen", "Melyzza", "Izyl" };
+
+            Array.Sort(names);
+
+            foreach (var list in names)
+                Console.WriteLine(list);
+        }
+    }
+}

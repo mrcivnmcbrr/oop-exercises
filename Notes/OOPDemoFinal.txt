@@ -1,0 +1,164 @@
+using System;
+
+namespace OOPDemoFinal
+{
+    class Calculate
+    {
+        //Method Overloading
+        public void AddNumbers(int a, int b)
+        {
+            Console.WriteLine("Results of 2 values are {0}", a + b);
+        }
+
+        public void AddNumbers(int a, int b, int c)
+        {
+            Console.WriteLine("Results of 3 values are {0}", a + b + c);
+        }
+
+        public void AddNumbers(int a, int b, int c, int d)
+        {
+            Console.WriteLine("Results of 4 values are {0}", a + b + c + d);
+        }
+
+        public void AddNumbers(int a, int b, int c, int d, int e)
+        {
+            Console.WriteLine("Results of 5 values are {0}", a + b + c + d + e);
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student cabs = new Student();
+
+            cabs.StudentName = "Richard Bambang";
+            cabs.CourseName = "BSIT";
+
+            cabs.StudentDetails();
+
+            //method overriding
+            cabs.TeacherName = "Edward Bustillos";
+            cabs.TeacherDetails();
+            cabs.GetTeacherDetails("BSIT");
+
+            //method overloading
+            Calculate  cal = new Calculate();
+            cal.AddNumbers(2, 3);
+            cal.AddNumbers(2, 3, 4);
+            cal.AddNumbers(2, 3, 4, 5);
+            cal.AddNumbers(2, 3, 4, 5, 6);
+
+
+
+
+
+            Console.Read();
+        }
+    }
+}
+
+
+STUDENT.CS
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OOPDemoFinal
+{
+    //Abstraction and Encapsulation
+   public class Student : Teacher //to add inheritance (, + classn name)
+    {
+        //Properties 
+        private string studentname;
+        private string course;
+
+        //Methods 
+        public string StudentName
+        {
+            get //read
+            {
+                return studentname;
+            }
+            set //read-write
+            {
+                studentname = value;
+            }
+        }
+
+        public string CourseName
+        {
+            get // read
+            {
+                return course;
+            }
+            set //read-write
+            {
+                course = value;
+            }
+        }
+
+        public void StudentDetails()
+        {
+            Console.WriteLine("Student Name: " + StudentName);
+            Console.WriteLine("Course: " + CourseName);
+        }
+
+        public void StudentEnroll()
+        {
+            Console.WriteLine("You may enroll");
+
+        }
+        
+        public void TeacherDetails()
+        {
+            string teachername = "Maynard Capil";
+            TeacherName = teachername;
+            Console.WriteLine("Teacher name is: " + TeacherName);
+        }
+
+        public void StudentRead()
+        {
+            Console.WriteLine("Student Library");
+        }
+    }
+}
+
+
+TEACHER.CS
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OOPDemoFinal
+{
+    //Inheritance
+   public class Teacher
+    {
+        public string TeacherName;
+        private string Program;
+
+        public Teacher()
+        {
+            Console.WriteLine("This is base class constructor");
+        }
+
+        public void GetTeacherDetails(string program)
+        {
+            Program = program;
+            Console.WriteLine("Your Name is {0}", TeacherName);
+            Console.WriteLine("Your Program is {0}", Program);
+        }
+
+    }
+
+}//private strings can be accessed, just add a value
+
+
+
+
+
+ 

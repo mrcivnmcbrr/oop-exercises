@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Switch
+{
+    
+    public class EmployeeDetails
+    {
+        //Properties
+        public string EmployeeName;
+        public string EmployeeID;
+        public string Position;
+
+        //Method
+        public void EmployeeN()
+        {
+
+            Console.WriteLine("Enter Employee Name: ");
+            EmployeeName = Console.ReadLine();
+
+        }
+        public void EmployeeIdentity()
+        {
+            Console.WriteLine("Enter Employee ID: ");
+            EmployeeID = Console.ReadLine();
+
+        }
+        public void EmployeePosition()
+        {
+            Console.WriteLine("Enter Position: ");
+            Position = Console.ReadLine();
+
+        }
+        
+    }
+
+    public class ComputeSalary
+    {
+        public int Rate;
+        public double Hours;
+        
+
+
+        public void PrintSalary()
+        {
+            double computedSalary;
+            EmployeeDetails emp = new EmployeeDetails();
+
+            Console.WriteLine("Enter Rate: ");
+            Rate = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter Salary: ");
+            Hours = Double.Parse(Console.ReadLine());
+
+            computedSalary = Rate * Hours;
+
+            emp.EmployeeIdentity();
+            Console.WriteLine("Employee ID is " + emp.EmployeeID);
+            Console.WriteLine("Your Computed Salary is {0}", computedSalary);
+
+        }
+    }
+
+     
+    class Program
+    {
+            
+        static void Main(string[] args)
+        {
+    
+            EmployeeDetails nard = new EmployeeDetails(); //instantiate
+            ComputeSalary salary = new ComputeSalary();
+
+            nard.EmployeeN();
+            
+            salary.PrintSalary();
+
+
+            Console.Read();
+            
+        }
+    }
+}

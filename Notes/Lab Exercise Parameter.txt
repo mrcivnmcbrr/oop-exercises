@@ -1,0 +1,319 @@
+Problem:
+Write a program C# program in which accept two number from the users and able to perform addition, subtraction, multiple and division, modulo.
+
+Hint: it should be parameterized with 2 arguments.
+
+Sample Program Output
+
+Enter First Number:  10
+
+Enter Second Number: 3
+
+----------------------------------
+
+Results Here
+
+(+) = 13
+
+(-) = 7
+
+(*) = 30
+
+(/) = 3.33333333
+
+(%) = 1
+
+
+CODE:
+
+using System;
+
+namespace LabExerciseParameter
+{
+    public class NumberInput
+    {
+        public void EnterNumber(double num1, double num2)
+        {
+            Console.WriteLine("----INPUT NUMBER");
+
+            Console.Write("\n\tEnter First Number: ");
+            num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("\n\tEnter Second Number: ");
+            num2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("\n\n----OPERATIONS");
+            double sum = num1 + num2;
+            Console.WriteLine("\n\tAddition (+) = " + sum);
+
+            double diff = num1 - num2;
+            Console.WriteLine("\n\tSubtraction (-) = " + diff);
+
+            double prod = num1 * num2;
+            Console.WriteLine("\n\tMultiplication (*) = " + prod);
+
+            double quotient = num1 / num2;
+            Console.WriteLine("\n\tDivision (/) = " + Math.Round(quotient,2));
+
+            double modulus = num1 % num2;
+            Console.WriteLine("\n\tModulus (%) = " + modulus);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            NumberInput cabs = new NumberInput();
+            cabs.EnterNumber(0, 0);
+           
+            Console.Read();
+        }
+    }
+}
+
+Problem:
+Write a parameter functions that can accept 3 parameters to get the complete course details in the form of <Year and Section>, <Subject>,<Course>
+
+Sample Program Output
+
+Enter Year and Section: BIT2
+
+Enter Subject: OOP1
+
+Enter Course: BSIT
+
+Your Complete Details: BIT2, OOP1,BSIT
+
+CODE:
+
+using System;
+
+namespace number2
+{
+    public class StudentProgram
+    {
+        public void StudentIdentity(string YearAndSection, string Subject, string Course)
+        {
+            Console.WriteLine("\t-------- STUDENT INFO --------");
+            
+            Console.Write("\n\tEnter Year and Section: ");
+            YearAndSection = Console.ReadLine();
+
+            Console.Write("\n\tEnter Subject: ");
+            Subject = Console.ReadLine();
+
+            Console.Write("\n\tEnter Course: ");
+            Course = Console.ReadLine();
+
+            Console.WriteLine("\n\t\t-------- STUDENT SUMMARY --------");
+            Console.WriteLine("\n\t\tYour Student Details: " + YearAndSection + ", " + Subject + ", " + Course);
+        }
+    }
+    
+    
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StudentProgram dets = new StudentProgram();
+
+            dets.StudentIdentity("{0}", "{0}", "{0}");
+
+            Console.Read();
+        }
+    }
+}
+
+
+Problem:
+Create a multiplication table function called "MutiplicationTable" with 1 parameter.
+
+Hint: The Loop should be implemented within the function.
+
+Sample Program Output:
+
+Enter Number: 1
+
+1 X 1 = 1
+
+1 X 2 = 2
+
+1 X 3 = 3
+
+1 X 4 = 4
+
+1 X 5 = 5
+
+1 X 6 = 6
+
+1 X 7 = 7
+
+1 X 8 = 8
+
+1 X 9 = 9
+
+1 X 10 = 10
+
+CODE:
+
+using System;
+
+namespace number3
+{
+    public class MultiplicationTable
+    {
+        public void Table(int numb, int ctr = 1)
+        {
+
+            
+
+            Console.Write("Enter a number: ");
+                numb = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\n\t------- MULTIPLICATION TABLE -------");
+
+            while (ctr <= 10)
+            {
+                Console.WriteLine("\n\t\t     " + numb + " * " + ctr + " = " + numb * ctr);
+                ctr++;
+            } 
+           
+                
+                            
+
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MultiplicationTable mTable = new MultiplicationTable();
+
+            mTable.Table(1, 1);
+
+            Console.Read();
+        }
+    }
+}
+
+
+Problem:
+Create a separate functions with return type
+
+FullName (string firstname, string lastname)
+GetCourseDescription(CourseCode)
+If CourseCode = 'IT' 
+Description is Bachelor of Science in Information Technology
+Additional 2 courses
+GetGradeRemarks(grade)
+use switch case
+grade < 75 remarks is failed
+grade > = 75 remarks is passed.
+
+CODE:
+
+using System;
+
+namespace number4
+{
+    public class StudenInformation
+    {
+       public string FirstName(string firstName)
+        {
+            return firstName;
+        }
+
+        public string LastName(string lastName)
+        {
+            return lastName;
+        }
+
+        public string CourseDescription(string CourseCode)
+        {
+            return CourseCode;
+        }
+
+        public double GradeRemarks(double Remarks)
+        {
+            return Remarks;
+        }
+
+        public void FullName(string firstName, string lastName)
+        {
+            Console.WriteLine("----STUDENT INFORMATION");
+            
+            Console.Write("\n\tEnter First Name: ");
+            firstName = Console.ReadLine();
+
+            Console.Write("\n\tEnter Last Name: ");
+            lastName = Console.ReadLine();
+
+            Console.WriteLine("\n\t\tYour full name is " + firstName + " "+ lastName + ".");
+        }
+
+        public void GetCourseDescription(string CourseCode)
+        {
+            Console.WriteLine("\n\n----STUDENT COURSE DESCRIPTION");
+
+            Console.Write("\n\tEnter Course: ");
+            CourseCode = Console.ReadLine().ToUpper();
+
+            if (CourseCode == "IT" || CourseCode == "BSIT")
+            {
+                Console.WriteLine("\n\t\tCourse Description is Bachelor of Science in Information Technology.");
+            }
+            else if (CourseCode == "Com Sci" || CourseCode == "BSCS")
+            {
+                Console.WriteLine("\n\t\tCourse Description is Bachelor of Science in Computer Science.");
+            }
+            else if (CourseCode == "AE" || CourseCode == "BSAE")
+            {
+                Console.WriteLine("\n\t\tCourse Description is Bachelor of Science in Aeronautical Engineering.");
+            }
+            else
+            {
+                Console.WriteLine("\n\t\tInvalid Course.... Please Try again!!");
+            }                
+        }
+
+        public void GetGradeRemarks(double Remarks)
+        {
+            Console.WriteLine("\n\n----STUDENT FINAL GRADE");
+
+            Console.Write("\n\tEnter Final Grade: ");
+            Remarks = Convert.ToDouble(Console.ReadLine());
+
+            if(Remarks <= 74.99)
+            {
+                Console.WriteLine("\n\t\tRemarks is FAILED.");
+            }
+           else if(Remarks <= 100.00)
+            {
+                Console.WriteLine("\n\t\tRemarks is PASSED.");
+            }
+            else
+            {
+                Console.WriteLine("\n\t\tINVALID GRADE!!");
+            }    
+
+        }
+    }
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StudenInformation details = new StudenInformation();
+
+            details.FullName("Marc Ivan", "Cabrera");
+            details.GetCourseDescription("IT");
+            details.GetGradeRemarks(0);
+
+
+            Console.Read();
+        }
+    }
+}
+

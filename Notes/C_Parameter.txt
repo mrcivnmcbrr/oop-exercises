@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPParam
+{
+    public class StudentDetails
+    {
+        public string FirstName(string firstname)
+        {
+            
+            return firstname;
+        }
+
+        public int Age(int age)
+        {
+            
+            return age;
+        }
+
+        public void StudentName(string firstname, string lastname, int age)
+            {
+            Console.WriteLine("Enter First Name: ");
+            firstname = Console.ReadLine();
+
+            Console.WriteLine("Enter Last Name: ");
+            lastname = Console.ReadLine();
+
+            Console.WriteLine("Enter Age Name: ");
+                age = Convert.ToInt32( Console.ReadLine());
+
+            Console.WriteLine("Your full name " + lastname + " " + firstname + " and your age is " + age);
+
+            }
+
+        public void QuizGrade(double quiz1, double quiz2)
+        {
+            double qTotal;
+            qTotal = (quiz1 + quiz2) / 2;
+            Console.WriteLine("Your Average is " + qTotal);
+        }    
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StudentDetails nard = new StudentDetails();
+
+             nard.StudentName("Maynard", "Capil", 17);
+
+            nard.QuizGrade(90, 78);
+
+            nard.FirstName("Maynard");
+
+            Console.Read();
+        }
+    }
+}

@@ -1,0 +1,152 @@
+//namespace
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOP1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //PHASE 1: The San Beda University wants to automate the grading system
+            //Student Name, Course, StudentID
+            //Quiz =15%, Project=20%, 
+            //Assignment = 15%, LabWork = 30%, FinalExam = 20%
+
+            //PHASE 2: Pass or Failed.
+            //PHASE 3:
+                //EQUIVALENCIES
+                //A+ (98-100) / A (97-95) /A- (94-91) /
+                //B+ (90-88), B (87-85), B- (84-81) 
+                //C+ (80 - 78) C- 77-76, D - 75 
+                
+            String studentName;
+            String studentCourse;
+            int studentID;
+            string equivalency;
+            double quiz1, quiz2, quizTotal;
+            double project, projectTotal;
+            double assignment, assignmentTotal;
+            double labwork, labworkTotal;
+            double finalexam, finalexamTotal;
+            double finalGrade;
+
+
+            Console.WriteLine("Enter Student Name: ");
+            studentName = Console.ReadLine();
+
+            Console.WriteLine("Enter Student ID: ");
+            studentID = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Student Course: ");
+            studentCourse = Console.ReadLine();
+
+            Console.WriteLine("********************************");
+            Console.WriteLine("Enter Quiz 1: ");
+            quiz1 = Convert.ToDouble(Console.ReadLine());    
+            Console.WriteLine("Enter Quiz 2: ");
+            quiz2 = Convert.ToDouble(Console.ReadLine());
+
+            quizTotal = (quiz1 + quiz2) / 2 * .15;
+
+            Console.WriteLine("Enter Project : ");
+            project = Convert.ToDouble(Console.ReadLine());
+            projectTotal = project * .20;
+
+            Console.WriteLine("Enter Assignment : ");
+            assignment = Convert.ToDouble(Console.ReadLine());
+            assignmentTotal = assignment * .15;
+
+            Console.WriteLine("Enter Lab Work : ");
+            labwork = Convert.ToDouble(Console.ReadLine());
+            labworkTotal = labwork * .30;
+
+            Console.WriteLine("Enter Final Exam : ");
+            finalexam = Convert.ToDouble(Console.ReadLine());
+            finalexamTotal = finalexam * .20;
+
+            //OUTPUT
+            Console.WriteLine();
+            finalGrade = quizTotal + projectTotal + assignmentTotal + labworkTotal + finalexamTotal;
+
+            Console.Write("Student Name is: " + studentName);
+            Console.WriteLine();
+            Console.Write("Student ID is: " + studentID);
+            Console.WriteLine();
+            Console.WriteLine("Your Final Grade is " + Math.Round(finalGrade,0));
+
+            double finalEquivalency;
+            finalEquivalency = Math.Round(finalGrade, 0);
+
+            if (finalEquivalency < 75)
+            {
+                Console.WriteLine("Failed!");
+
+            }
+            else
+            {
+                Console.WriteLine("Passed");
+            }
+
+            //EQUIVALENCIES
+            //A+ (98-100) / A (97-95) /A- (94-91) /
+            //B+ (90-88), B (87-85), B- (84-81) 
+            //C+ (80 - 78) C- 77-76, D - 75 
+
+            if (finalEquivalency >= 98)
+            {
+
+                Console.WriteLine("Your Equivalency is A+");
+            }
+
+            else if (finalEquivalency <= 97 && finalGrade >= 95)
+            {
+
+                Console.WriteLine("Your Equivalency is A");
+            }
+            else if (finalEquivalency <= 94 && finalGrade >= 91)
+            {
+
+                Console.WriteLine("Your Equivalency is A-");
+            }
+            else if (finalEquivalency <= 90 && finalGrade >= 88)
+            {
+
+                Console.WriteLine("Your Equivalency is B+");
+            }
+
+            else if (finalEquivalency <= 87 && finalGrade >= 85)
+            {
+
+                Console.WriteLine("Your Equivalency is B");
+            }
+            else if (finalEquivalency <= 84 && finalGrade >= 81)
+            {
+
+                Console.WriteLine("Your Equivalency is B-");
+            }
+
+            else if (finalEquivalency <= 80 && finalGrade >= 78)
+            {
+
+                Console.WriteLine("Your Equivalency is C+");
+            }
+            else if (finalEquivalency <= 77 && finalGrade >= 76)
+            {
+
+                Console.WriteLine("Your Equivalency is C-");
+            }
+            else if(finalEquivalency <= 75)
+            {
+                Console.WriteLine("Your Equivalency is D");
+
+            }
+
+
+            Console.Read();
+        }
+    }
+}

@@ -1,0 +1,83 @@
+	#1
+
+
+		int term;
+            string fullName, company, position, Income;
+            double loanAmount, amountInterest, TotAmount, monthAmor, interest = 0.05; ;
+
+            Console.Write("Enter Employee Full Name: ");
+            fullName = Console.ReadLine();
+
+            Console.Write("Enter Company: ");
+            company = Console.ReadLine();
+
+            Console.Write("Enter Employee Position: ");
+            position = Console.ReadLine();
+
+            Console.Write("Enter Source of Income: ");
+            Income = Console.ReadLine();
+
+            Console.Write("Enter Desired Loan Amount: ");
+            loanAmount = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter Years to Pay <12, 24, 34 only>: ");
+            term = Convert.ToInt32(Console.ReadLine());
+
+            amountInterest = (loanAmount * interest);
+            TotAmount = (loanAmount + amountInterest);
+            monthAmor = (TotAmount / term);
+
+            Console.WriteLine();
+            Console.WriteLine("Full Name: " + fullName);
+            Console.WriteLine("Company: " + company);
+            Console.WriteLine("Position: " + position);
+            Console.WriteLine("Source of Income: " + Income);
+            Console.WriteLine("Loan Amount: PHP " + loanAmount);
+            Console.WriteLine("Term: " + term);
+
+            
+            Console.WriteLine("Total Loan Amount: PHP " + TotAmount);
+            Console.WriteLine("Amortization Table");
+
+            Console.WriteLine("Terms\t Monthly Payment");
+
+            int[] monthArr = new int[12];
+            monthArr[0] = 1;
+            monthArr[1] = 2;
+            monthArr[2] = 3;
+            monthArr[3] = 4;
+            monthArr[4] = 5;
+            monthArr[5] = 6;
+            monthArr[6] = 7;
+            monthArr[7] = 8;
+            monthArr[8] = 9;
+            monthArr[9] = 10;
+            monthArr[10] = 11;
+            monthArr[11] = 12;
+
+            for (int i = 0; i < 12; i++)
+            {
+                Console.WriteLine(monthArr[i] + "\t " + monthAmor);
+
+            }
+
+
+#2
+ Console.Write("Enter Student Full Name: ");
+          string sName = Console.ReadLine();
+
+          Console.Write("Enter your Course: ");
+          string course = Console.ReadLine();
+
+
+          string[] arrbook = new String[5];
+
+          for (int a = 0; a < 5; a++)
+          {
+              Console.Write("Enter a book: ");
+              arrbook[a] = Console.ReadLine();
+          }
+
+
+          Console.WriteLine("Hi " + sName + " from " + course + " department, the following books have been entered; " + arrbook[0] + ", " 
+            + arrbook[1] + ", "  + arrbook[2] + ", " + arrbook[3] + ", " + arrbook[4]);

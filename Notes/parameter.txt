@@ -1,0 +1,64 @@
+using System;
+
+namespace Parameter
+{
+    public class StudentDetails
+    {
+       
+        public string FirstName(string firstname)
+        {
+            Console.WriteLine("Your First Name is " + firstname);
+            return firstname;
+        }
+        
+        public void StudentName(string firstname, string lastname, int age)
+        {
+            Console.WriteLine("Enter First Name: ");
+            firstname = Console.ReadLine();
+
+            Console.WriteLine("Enter Last Name: ");
+            lastname = Console.ReadLine();
+
+            Console.WriteLine("Enter Age: ");
+            age = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("Your full name " + lastname + ", " + firstname + " and your age is ");
+        }
+
+        public void QuizGrade(double quiz1, double quiz2)
+        {
+            double qTotal;
+            qTotal = (quiz1 + quiz2) / 2;
+            Console.WriteLine("Your Average is " + qTotal);
+        }
+
+    }
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StudentDetails cabs = new StudentDetails();
+
+            // cabs.StudentName("Marc Ivan", "Cabrera", 20);
+
+
+            //answer1
+            /* Console.WriteLine("Enter Quiz 1: ");
+             double quiz1 = Convert.ToDouble(Console.ReadLine());
+
+             Console.WriteLine("Enter Quiz 2: ");
+             double quiz2 = Convert.ToDouble(Console.ReadLine());*/
+
+            //answer2
+            //cabs.QuizGrade(100, 79);
+
+            cabs.FirstName("Marc Ivan");
+
+            Console.Read();
+        }
+    }
+}

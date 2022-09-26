@@ -1,0 +1,193 @@
+using System;
+
+namespace OOP_Post_Activity
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\t\t W E L C O M E  T O  S A N  B E D A  O N L I N E  D I R E C T O R Y" );
+            
+            Employee cabs = new Employee();
+
+            cabs.name = "Marc Cabrera";
+            cabs.position = "IT Professor";
+            cabs.company = "San Beda University";
+
+            cabs.EmployeeDetails();
+
+
+
+
+            Console.Read();
+        }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OOP_Post_Activity
+{
+    public class Employee
+    {
+        private string EmployeeName;
+        private string PositionTitle;
+        private string Company;
+
+        public string name
+        {
+            get
+            {
+                return EmployeeName;
+            }
+            set
+            {
+                EmployeeName = value;
+            }
+        }
+
+        public string position
+        {
+            get
+            {
+                return PositionTitle;
+            }
+            set
+            {
+               PositionTitle = value;
+            }
+        }
+
+        public string company
+        {
+            get
+            {
+                return Company;
+            }
+            set
+            {
+               Company = value;
+            }
+        }
+
+        public void EmployeeDetails()
+        {
+            Console.WriteLine("\n  ----- EMPLOYEE DETAILS -----");
+
+            Console.WriteLine("\n  Employee Name: " + name);
+            Console.WriteLine("\n  Position/Title: " + position);
+            Console.WriteLine("\n  Company: " + company);
+        }
+
+
+    }
+}
+
+
+
+using System;
+using System.Reflection.Metadata.Ecma335;
+
+namespace OOP_Post_Activity
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\t\t W E L C O M E  T O  R E D  C R O S S  C O V I D  T R A C E R");
+
+            Tracer cabs = new Tracer();
+
+            cabs.name = "Michael Kobe";
+            cabs.age = 23;
+            cabs.temperature = 37.4;
+            cabs.results = "Negative.";
+
+            cabs.PatientDetails();
+
+
+            Console.Read();
+        }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OOP_Post_Activity
+{
+    class Tracer
+    {
+        private string Name;
+        private int Age;
+        private double Temperature;
+        private string TestResult;
+
+        public string name
+        {
+            get
+            {
+                return Name;
+            }
+            set
+            {
+                Name = value;
+            }
+        }
+        public int age
+        {
+            get
+            {
+                return Age;
+            }
+            set
+            {
+                Age = value;
+            }
+        }
+        public double temperature
+        {
+            get
+            {
+                return Temperature;
+            }
+            set
+            {
+                Temperature = value;
+            }
+        }
+        public string results
+        {
+            get
+            {
+                return TestResult;
+            }
+            set
+            {
+                TestResult = value;
+            }
+        }
+
+        public void PatientDetails()
+        {
+            Console.WriteLine("\n  ----- COVID 19 PATIENT DETAILS -----");
+
+            Console.WriteLine("\n  Patient Name: " + name);
+            Console.WriteLine("\n  Patient Age: " + age + " years old.");
+            Console.WriteLine("\n  Temperature: " + temperature);
+            Console.WriteLine("\n  Test Result: " + results);
+
+        }
+
+    }
+}
+
+
+

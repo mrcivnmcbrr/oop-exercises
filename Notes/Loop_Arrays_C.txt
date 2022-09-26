@@ -1,0 +1,38 @@
+
+	String[] arr = new String[5];
+		
+		arr[0] = "Maynard";
+		arr[1] = "Lebron";
+		arr[2] = "Rondo";
+		arr[3] = "Bradley";
+		arr[4] = "Smith";
+		
+		foreach(String name in arr)
+		{
+			Console.WriteLine("Hello " + name);
+		}
+	}
+		int a;
+		int[] arr = new int[6];
+		
+		for(a = 0; a < 6; a++)
+		{
+			Console.Write("Enter your numbers: ");
+			arr[a] = Convert.ToInt32(Console.ReadLine());
+		}
+		
+		for(a = 0; a < 5; a++)
+
+		{
+			Console.WriteLine("You entered {0}", arr[a]);
+		}
+		
+
+
+		int[] num = {2,5,18,21,3};
+		Array.Reverse(num);
+		
+		foreach(int a in num)
+		{
+			Console.WriteLine(a);
+		}

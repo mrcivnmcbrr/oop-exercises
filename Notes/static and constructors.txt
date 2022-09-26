@@ -1,0 +1,150 @@
+using System;
+
+namespace Static_Class
+{
+    //sample Static
+    static class Beda
+    {
+        //fields
+        public static string StudentName;
+        public static string Course;
+
+
+        //constructor
+        static Beda()
+        {
+            StudentName = "Marc Cabrera";
+            Course = "BSIT";
+        }
+
+    }
+
+    //combination of static and non static
+    class Student
+    {
+        //non static data members 
+        public string StudentName;
+        public string StudentID;
+
+        public void SetStudentInfo(string studentname, string studentid)
+        {
+            StudentName = studentname;
+            StudentID = studentid;
+        }
+
+        public void DisplayStudentInfo()
+        {
+            Console.WriteLine(StudentName + "-" + StudentID);
+        }
+
+        //static data members
+        public static string SubjectName = "OOP1";
+        public static string TeacherName = "Dr. Jennifer Carpio";
+
+
+        //static method
+        public static void DisplaySubject()
+        {
+            Console.WriteLine(SubjectName);
+            Console.WriteLine(TeacherName);
+        }
+    }
+
+    //Constructor
+    class Car
+    {
+        public string model;
+        public Car() //same name as class
+        {
+            model = "Toyota";
+        }
+    }
+
+    class Car2
+    {
+        //fields
+        public string model;
+        public string color;
+        public int year;
+        
+        public Car2(string model, string color, int year)
+        {
+            this.model = model; //to avoid confusion of the compiler
+            this.color = color;
+            this.year = year;
+        }
+
+    }
+
+    class Car3
+    {
+        //fields
+        public string model;
+        public string color;
+        public int year;
+
+        public void Model(string model)
+        {
+            this.model = model;
+        }
+
+        public void Color(string color)
+        {
+            this.color = color;
+        }
+
+        public void Year(int year)
+        {
+            this.year = year;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Beda.StudentName);
+            Console.WriteLine(Beda.Course);
+
+            //Call Static
+            Student.DisplaySubject();
+
+            //Call Non Static
+            Student oop1 = new Student();
+
+            oop1.SetStudentInfo("Marc Cabrera", "C-1901187");
+            oop1.DisplayStudentInfo();
+
+            //Call Constructor
+            Car toyota = new Car();
+            Console.WriteLine(toyota.model); //field name yung tatawagin
+
+            Car2 ford = new Car2("Ford", "White", 2020);
+            Console.WriteLine(ford.model + "-" + ford.color + "-" + ford.year);
+
+            Console.WriteLine("Without Constructor");
+            //without constructor 
+            Car3 honda = new Car3();
+            honda.model = "Honda";
+            honda.color = "Red";
+            honda.year = 1990;
+
+            Car3 porche = new Car3();
+            porche.model = "Porche";
+            porche.color = "Blue";
+            porche.year = 2020;
+
+            Console.WriteLine(honda.model + "-" + honda.color + "-" + honda.year);
+            Console.WriteLine(porche.model + "-" + porche.color + "-" + porche.year);
+
+            Console.WriteLine("With Constructor");
+            //Constructor
+            Car2 ford1 = new Car2("Ford", "Red", 1980);
+            Car2 sarao = new Car2("Sarao", "White", 2020);
+            Console.WriteLine(ford1.model);
+            Console.WriteLine(sarao.model);
+
+            Console.Read();
+        }
+    }
+}

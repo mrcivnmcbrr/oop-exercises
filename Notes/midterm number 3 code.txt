@@ -1,0 +1,261 @@
+Problem: 
+Your senior developer asked you to create a reusable functions for the point of sales system.  Below are the requirements and business rules.
+
+Class Name: Customers
+    Methods
+      ViewCustomerDetails()
+	Customer Name
+	Location
+	Contact Number
+
+
+      CustomerReceipt()
+	Product ID
+	Quantity
+	Cash
+	Total Amount = Cash Quantity
+	Change
+
+Class Name: ListOfProduct
+    Methods
+	Products()
+	ProductID() 
+	Description()
+	Price()
+
+o	Product ID and Customer name should be extended to CustomerReceipt() method.
+o	Methods and Attributes should be accessible outside the namespace.
+o	Change and Total amount are 2 decimal place
+
+Sample Program Output:
+List of Product
+1       Okra                 23.50
+2       Ampalaya             12.50
+3       Sibuyas	             14.00
+4       Talong               18.50
+5       Bawang                9.50
+
+Enter Customer Name: Maynard Capil
+Enter Product ID : 1
+Enter Quantity:  2
+Enter Cash: 50
+Change:  3
+TOTAL AMOUNT:  47.00
+
+
+CODE:
+
+using System;
+
+namespace midterm_3
+{
+    public class Customers
+    {
+        public string custoName, location, contactNum;
+
+        public void ViewCustomerDetails()
+        {
+
+            Console.WriteLine("\n\tCUSTOMER DETAILS");
+            Console.WriteLine("\t--------------------------");
+            Console.Write("\tEnter Customer Name: ");
+            custoName = Console.ReadLine();
+
+            Console.Write("\n\tEnter Customer Location: ");
+            location = Console.ReadLine();
+
+            Console.Write("\n\tEnter Contact Number: ");
+            contactNum = Console.ReadLine();
+        }
+
+        
+
+        public int quantity, prodCode;
+        public string price;
+        public double cash, totPrice, change, prodPrice;
+
+        
+        public void CustomerReceipt()
+        {
+            Customers dets = new Customers();
+
+            dets.ViewCustomerDetails();
+
+            Console.WriteLine("\n\tRECEIPT DETAILS");
+            Console.WriteLine("\t--------------------------");
+            Console.Write("\tEnter Product NUMBER Code: ");
+            prodCode = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\n\tEnter Product Quantity: ");
+            quantity = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("\n\tEnter Cash in Hand");
+            Console.Write("\t\tPHP ");
+            cash = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine();
+
+          
+
+            switch (prodCode)
+            {
+                case 001:
+                    prodPrice = 1698.50;
+                    totPrice = quantity * prodPrice;
+                    change = cash - totPrice;
+
+                    Console.WriteLine("\n\tSUMMARY");
+                    Console.WriteLine("\t--------------------------");
+                    Console.WriteLine("\tCustomer Name: " + dets.custoName);
+                    Console.Write("\n\tProduct Code of choice: " + prodCode);
+                    Console.WriteLine("\n\tCash in Hand: PHP " + cash);
+                    Console.WriteLine("\n\tProduct Price: PHP " + prodPrice);
+                    Console.WriteLine("\n\t-------------------------------------------------------");
+                    Console.WriteLine("\t\t\t     RAWR APPAREL RECEIPT");
+                    Console.WriteLine("\t\t A.BONIFACIO AVE BRGY BALINGASA QUEZON CITY");
+                    Console.WriteLine("\t\t\tTRANS. DATE: 08/10/2020 18:45:00");
+                    Console.WriteLine();
+                    Console.WriteLine("\tTotal Price:\tPHP " + Math.Round(totPrice, 2));
+                    Console.WriteLine("\tCHANGE:\t\tPHP " + Math.Round(change, 2));
+                    Console.WriteLine("\n\n\tTHANK YOU FOR CHOOSING RAWR APPAREL. COMEBACK AGAIN SOON!");
+                    Console.WriteLine("\tOWNER: MARC IVAN M. CABRERA");
+                    break;
+
+                case 002:
+                    prodPrice = 2499.75;
+                    totPrice = quantity * prodPrice;
+                    change = cash - totPrice;
+
+                    Console.WriteLine("\n\tSUMMARY");
+                    Console.WriteLine("\t--------------------------");
+                    Console.WriteLine("\tCustomer Name: " + dets.custoName);
+                    Console.Write("\n\tProduct Code of choice: " + prodCode);
+                    Console.WriteLine("\n\tCash in Hand: PHP " + cash);
+                    Console.WriteLine("\n\tProduct Price: PHP " + prodPrice);
+                    Console.WriteLine("\n\t-------------------------------------------------------");
+                    Console.WriteLine("\t\t\t     RAWR APPAREL RECEIPT");
+                    Console.WriteLine("\t\t A.BONIFACIO AVE BRGY BALINGASA QUEZON CITY");
+                    Console.WriteLine("\t\t\tTRANS. DATE: 10/10/2020 15:28:54");
+                    Console.WriteLine();
+                    Console.WriteLine("\tTotal Price:\tPHP " + Math.Round(totPrice, 2));
+                    Console.WriteLine("\tCHANGE:\t\tPHP " + Math.Round(change, 2));
+                    Console.WriteLine("\n\n\tTHANK YOU FOR CHOOSING RAWR APPAREL. COMEBACK AGAIN SOON!");
+                    Console.WriteLine("\tOWNER: MARC IVAN M. CABRERA");
+                    break;
+
+                case 003:
+                    prodPrice = 1399.99;
+                    totPrice = quantity * prodPrice;
+                    change = cash - totPrice;
+
+                    Console.WriteLine("\n\tSUMMARY");
+                    Console.WriteLine("\t--------------------------");
+                    Console.WriteLine("\tCustomer Name: " + dets.custoName);
+                    Console.Write("\n\tProduct Code of choice: " + prodCode);
+                    Console.WriteLine("\n\tCash in Hand: PHP " + cash);
+                    Console.WriteLine("\n\tProduct Price: PHP " + prodPrice);
+                    Console.WriteLine("\n\t-------------------------------------------------------");
+                    Console.WriteLine("\t\t\t     RAWR APPAREL RECEIPT");
+                    Console.WriteLine("\t\t A.BONIFACIO AVE BRGY BALINGASA QUEZON CITY");
+                    Console.WriteLine("\t\t\tTRANS. DATE: 15/11/2020 09:15:36");
+                    Console.WriteLine();
+                    Console.WriteLine("\tTotal Price:\tPHP " + Math.Round(totPrice, 2));
+                    Console.WriteLine("\tCHANGE:\t\tPHP " + Math.Round(change, 2));
+                    Console.WriteLine("\n\n\tTHANK YOU FOR CHOOSING RAWR APPAREL. COMEBACK AGAIN SOON!");
+                    Console.WriteLine("\tOWNER: MARC IVAN M. CABRERA");
+                    break;
+
+                case 004:
+                    prodPrice = 3795.50;
+                    totPrice = quantity * prodPrice;
+                    change = cash - totPrice;
+
+
+                    Console.WriteLine("\n\tSUMMARY");
+                    Console.WriteLine("\t--------------------------");
+                    Console.WriteLine("\tCustomer Name: " + dets.custoName);
+                    Console.Write("\n\tProduct Code of choice: " + prodCode);
+                    Console.WriteLine("\n\tCash in Hand: PHP " + cash);
+                    Console.WriteLine("\n\tProduct Price: PHP " + prodPrice);
+                    Console.WriteLine("\n\t-------------------------------------------------------");
+                    Console.WriteLine("\t\t\t     RAWR APPAREL RECEIPT");
+                    Console.WriteLine("\t\t A.BONIFACIO AVE BRGY BALINGASA QUEZON CITY");
+                    Console.WriteLine("\t\t\tTRANS. DATE: 12/24/2020 09:55:00");
+                    Console.WriteLine();
+                    Console.WriteLine("\tTotal Price:\tPHP " + Math.Round(totPrice, 2));
+                    Console.WriteLine("\tCHANGE:\t\tPHP " + Math.Round(change, 2));
+                    Console.WriteLine("\n\n\tTHANK YOU FOR CHOOSING RAWR APPAREL. COMEBACK AGAIN SOON!");
+                    Console.WriteLine("\tOWNER: MARC IVAN M. CABRERA");
+                    break;
+
+                case 005:
+                    prodPrice = 1299.75;
+                    totPrice = quantity * prodPrice;
+                    change = cash - totPrice;
+
+
+                    Console.WriteLine("\n\tSUMMARY");
+                    Console.WriteLine("\t--------------------------");
+                    Console.WriteLine("\tCustomer Name: " + dets.custoName);
+                    Console.Write("\n\tProduct Code of choice: " + prodCode);
+                    Console.WriteLine("\n\tCash in Hand: PHP " + cash);
+                    Console.WriteLine("\n\tProduct Price: PHP " + prodPrice);
+                    Console.WriteLine("\n\t-------------------------------------------------------");
+                    Console.WriteLine("\t\t\t     RAWR APPAREL RECEIPT");
+                    Console.WriteLine("\t\t A.BONIFACIO AVE BRGY BALINGASA QUEZON CITY");
+                    Console.WriteLine("\t\t\tTRANS. DATE: 01/02/2021 12:00:00");
+                    Console.WriteLine();
+                    Console.WriteLine("\tTotal Price:\tPHP " + Math.Round(totPrice, 2));
+                    Console.WriteLine("\tCHANGE:\t\tPHP " + Math.Round(change, 2));
+                    Console.WriteLine("\n\n\tTHANK YOU FOR CHOOSING RAWR APPAREL. COMEBACK AGAIN SOON!");
+                    Console.WriteLine("\tOWNER: MARC IVAN M. CABRERA");
+                    break;
+
+                default:
+
+                    Console.WriteLine("INVALID INPUT!! PLEASE EXIT THE PROGRAM... ");
+                    break;
+
+            }
+        }
+
+    }
+    
+    public class ListOfProduct
+    {
+        public void ListOfProducts()
+        {
+            Console.WriteLine();
+            Console.WriteLine("\n\t\t\t\t W E L C O M E  T O  R A W R  A P P A R E L ");
+            Console.WriteLine("\t\t\t\t\t L I S T  O F  P R O D U C T S ");
+            Console.WriteLine("\n\t - - - - C O D E - - - - N A M E  O F  P R O D U C T S - - - - P R I C E - - - - ");
+            Console.WriteLine("\n\t\t   R-001\t 3D TREFOIL 3-STRIPES TEE (M)\t\tPHP 1,698.50");
+            Console.WriteLine("\n\t\t   A-002\t 3-STRIPES SHORTS (M)\t\t\tPHP 2,499.75");
+            Console.WriteLine("\n\t\t   W-003\t 3D TREFOIL CROP TOP (W)\t\tPHP 1,399.99");
+            Console.WriteLine("\n\t\t   R-004\t CUFFED PANTS (W)\t\t\tPHP 3,795.50");
+            Console.WriteLine("\n\t\t   P-005\t ADICOLOR BUCKET HAT \t\t\tPHP 1,299.75");
+
+            Console.WriteLine();
+            
+            Customers dets = new Customers();
+
+            dets.CustomerReceipt();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            ListOfProduct finalProd = new ListOfProduct();
+
+            finalProd.ListOfProducts();
+            
+            
+            
+
+            Console.ReadKey();
+        }
+    }
+}
