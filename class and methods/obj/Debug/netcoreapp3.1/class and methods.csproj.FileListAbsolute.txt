@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\bin\Debug\netcoreapp3.1\class and methods.exe
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\bin\Debug\netcoreapp3.1\class and methods.deps.json
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\bin\Debug\netcoreapp3.1\class and methods.runtimeconfig.json
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\bin\Debug\netcoreapp3.1\class and methods.runtimeconfig.dev.json
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\bin\Debug\netcoreapp3.1\class and methods.dll
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\bin\Debug\netcoreapp3.1\class and methods.pdb
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\obj\Debug\netcoreapp3.1\class and methods.csprojAssemblyReference.cache
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\obj\Debug\netcoreapp3.1\class and methods.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\obj\Debug\netcoreapp3.1\class and methods.AssemblyInfo.cs
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\obj\Debug\netcoreapp3.1\class and methods.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\obj\Debug\netcoreapp3.1\class and methods.dll
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\obj\Debug\netcoreapp3.1\class and methods.pdb
+C:\Users\User\Desktop\School Thing\2nd year\IT201\Code\class and methods\obj\Debug\netcoreapp3.1\class and methods.genruntimeconfig.cache
